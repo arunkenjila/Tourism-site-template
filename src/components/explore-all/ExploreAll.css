@@ -1,0 +1,20 @@
+.explore-all { padding: 3.5rem 1rem; background: #ffffff }
+.explore-all__inner { max-width: 1280px; margin: 0 auto }
+.section-header { text-align: center; margin-bottom: 1.5rem }
+.section-header h2 { font-size: 28px }
+
+.all-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem }
+
+.all-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 18px rgba(11,22,30,0.06); display: flex; flex-direction: column }
+.all-card__image { height: 180px; background-size: cover; background-position: center }
+.all-card__body { padding: 1.25rem; display:flex; flex-direction: column; gap: 0.75rem }
+.all-card__title { margin: 0; font-size: 18px; font-weight: 700 }
+.all-card__excerpt { margin: 0; color: #6b7280; line-height: 1.6; font-size: 0.975rem }
+
+.all-card__tags { display:flex; gap: 0.5rem; flex-wrap:wrap }
+.chip { background: #f1f8f5; color: #125d43; padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.78rem; display:inline-block }
+
+.all-card__cta { margin-top: 0.75rem; align-self: flex-start }
+
+@media (max-width: 980px) { .all-grid { grid-template-columns: repeat(2, 1fr) } }
+@media (max-width: 640px) { .all-grid { grid-template-columns: 1fr } .all-card__image { height: 220px } }

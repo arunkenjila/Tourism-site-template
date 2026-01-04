@@ -1,0 +1,194 @@
+/* Contact Us page styles */
+.contact-us {
+  max-width: 1200px;
+  margin: 3.5rem auto 4.5rem;
+  padding: 0 1rem;
+}
+
+.contact-us__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid #eef0f2;
+  box-shadow: 0 2px 8px rgba(13, 19, 23, 0.03);
+  border-radius: 8px;
+  padding: 1.75rem;
+}
+
+.contact-card__title {
+  margin: 0 0 1rem 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f1724;
+  text-align: center;
+}
+
+.field {
+  display: block;
+  margin-bottom: 0.85rem;
+}
+
+.field__label {
+  display: block;
+  font-size: 13px;
+  color: #6b7680;
+  margin-bottom: 0.45rem;
+  text-align: left; /* ensure labels are left-aligned despite inherited centering */
+  margin-left: 0.2rem;
+}
+
+.field__control {
+  width: 100%;
+  max-width: 455px;
+  border: 1px solid #e8eaec;
+  padding: 0.65rem 0.8rem;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #213547;
+  background: #fff;
+}
+
+.field select{
+  max-width: 485px;
+}
+
+.field__control:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46,229,157,0.08);
+  border-color: #d8f4e6;
+}
+
+.field__control--textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.field__error {
+  margin-top: 0.35rem;
+  color: #dc2626;
+  font-size: 12px;
+}
+
+.field--actions {
+  margin-top: 0.5rem;
+}
+
+.contact-us__btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .contact-us__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-toggle {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 4px;
+  margin: 0 auto 1rem; /* center wrapper and keep bottom margin */
+  border: 2px solid #2ee59d; /* green border around both buttons */
+  border-radius: 10px;
+  background: #fff;
+  width: max-content; /* shrink to fit the buttons */
+}
+
+.contact-toggle__btn {
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #223;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+
+.contact-toggle__btn:hover,
+.contact-toggle__btn:focus,
+.contact-toggle__btn:active,
+.contact-toggle__btn:focus-visible,
+.contact-toggle__btn.is-active:hover {
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.contact-toggle__btn.is-active {
+  background: #2ee59d;
+  color: #fff;
+  border-color: rgba(46,229,157,0.18);
+}
+
+.contact-us__inner.single {
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-us__inner.single .contact-card {
+  width: 100%;
+  max-width: min(560px, 90vw); /* narrower and responsive */
+  box-sizing: border-box;
+  padding: 2rem; /* add breathing room inside the card */
+}
+
+/* Center and constrain the form controls inside the card so they do not stretch edge-to-edge */
+.contact-us__inner.single .contact-card .field {
+  max-width: 520px;
+  margin: 0 auto 1.1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-us__inner.single .contact-card .field--actions {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-us__inner.single .contact-card .contact-us__btn {
+  width: 100%;
+}
+
+/* Popup overlay for form submission confirmation */
+.contact-popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+}
+
+.contact-popup__box {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(13, 19, 23, 0.18);
+}
+
+.contact-popup__message {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: #0f1724;
+}
+
+.contact-popup__actions button {
+  min-width: 110px;
+}
+
