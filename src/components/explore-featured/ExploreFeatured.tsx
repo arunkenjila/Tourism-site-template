@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import "./ExploreFeatured.css";
 
 type Destination = {

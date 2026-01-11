@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import "./Banner.css";
 
 function Banner(): JSX.Element {
